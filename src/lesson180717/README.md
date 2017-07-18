@@ -2,10 +2,20 @@
 
 - BoundedBuffer
 
-- await(), signal() methods
+- await(), signal() methods of Condition
 
 
+| type               | volatile | synchronized | lock   | semaphore | atomic |
+| ------------------ | -------- | ------------ | ------ |---------- | ------ |
+| visibility         |          |              |        |           |        |
+| can de interrupted |          |              |        |           |        |
+|                    |          |              |        |           |        |
+|                    |          |              |        |           |        |
+|                    |          |              |        |           |        |
 
-*hometask*
 
-используя tryLock() (палочки - locks), переписать задачу с философами
+## home task
+
+- используя tryLock() (палочки - locks), переписать задачу с философами, использовать lock with timeout
+- переписать BlockingQueue для задач на lock и condition
+- повар/официант с BoundedBuffer
