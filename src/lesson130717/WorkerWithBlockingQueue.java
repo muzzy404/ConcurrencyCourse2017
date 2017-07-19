@@ -1,11 +1,14 @@
 package lesson130717;
 
+import hometask180717.BlockingQueueWithLock;
+
 /**
  * Created by Daria on 11.07.2017.
  */
 public class WorkerWithBlockingQueue {
 
     final private BlockingQueue<Runnable> tasks;
+    //final private BlockingQueueWithLock<Runnable> tasks;
     final private Thread thread;
 
     volatile private boolean mayAcceptTasks;
@@ -16,6 +19,7 @@ public class WorkerWithBlockingQueue {
     public WorkerWithBlockingQueue() {
         synchronized (POISON_PILL) {
             tasks = new BlockingQueue<>();
+            //tasks = new BlockingQueueWithLock<>();
             thread = new Thread(this::process);
             thread.start();
             mayAcceptTasks = true;
