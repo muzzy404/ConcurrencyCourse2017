@@ -4,14 +4,19 @@
 
 - await(), signal() methods of Condition
 
+- RTFM :)
 
-| type               | volatile | synchronized | lock   | semaphore | atomic |
-| ------------------ | -------- | ------------ | ------ |---------- | ------ |
-| visibility         |          |              |        |           |        |
-| can de interrupted |          |              |        |           |        |
-|                    |          |              |        |           |        |
-|                    |          |              |        |           |        |
-|                    |          |              |        |           |        |
+
+| feature / synchronization type      | volatile | synchronized | lock   | semaphore | atomic |
+| ----------------------------------- | -------- | ------------ | ------ |---------- | ------ |
+| solves race condition problem       |    -     |     yes      |  yes   |     ?     |   ?    |
+| visibility                          |   yes    |     yes      |  yes   |     ?     |   ?    |
+| can be interrupted                  |    -     |      -       |  yes   |     ?     |   ?    |
+| lock with timeout                   |    -     |      -       |  yes   |     ?     |   ?    |
+| lock/unlock in separate code blocks |    -     |      -       |  yes   |     ?     |   ?    |
+| lock/unlock in different threads    |    -     |      -       |   -    |    yes    |   ?    |
+| multiple conditions                 |    -     |      -       |  yes   |     -     |   -    |
+| fair                                |    -     |      -       |  yes   |           |        |
 
 
 ## home task
