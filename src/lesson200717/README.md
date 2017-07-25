@@ -1,8 +1,8 @@
 # Lesson 20.07.2017
 
 - Semaphore, acquire()-release()
--- lock with timeout -> tryAcquire()
--- multiple conditions -> few semaphores
+    -- lock with timeout -> tryAcquire()
+    -- multiple conditions -> few semaphores
 
 - CountDownLatch class
 
